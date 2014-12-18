@@ -50,80 +50,15 @@ describe Board do
 		expect(board.shoot("A1")).to eq("Miss")
 	end
 
+	it 'can not shoot a cell that has already been shot at' do
+		board.shoot("A1")
+		expect{board.shoot("A1")}.to raise_error(RuntimeError, "A1 has already been shot at, please choose another Co-ordinate!")
+	end
+
 	it 'can shoot at a cell with a ship and register a hit on the ship' do
 		board.place_ship_horizontally("A1", battleship)
 		expect(board.shoot("A1")).to eq("Hit")
 	end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	# it 'should be intialized with 100 squares' do
-	# 	expect(board.hash_length).to eq(100)
-	# end
-
-	# it 'can find any co-ordinate and see if its occupied' do
-	# 	expect(board.find("F9")).to_not be_occupied
-	# end
-
-	# it 'can find any co-ordinate and see if its shot at' do
-	# 	expect(board.find("F9")).to_not be_shot_at
-	# end
-
-	# it 'can shoot at a cell whether it\'s occupied or not' do
-	# 	board.shoot("A1")
-	# 	expect(board.find("A1")).to be_shot_at
-	# end
-
-	# it 'can place a ship' do
-	# 	board.placement("A1", ship)
-	# 	expect(board.find("A1")).to be_occupied
-	# end
-
-	# it 'can place a ship over 3 cells' do
-	# 	board.place_ship(["A1", "A2", "A3"], ship)
-	# 	expect(board.find("A3")).to be_occupied
-	# 	expect(board.find("A4")).to_not be_occupied
-	# end
 
 end
 

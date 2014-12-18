@@ -1,7 +1,9 @@
 class Ships
 
-	def initialize	 
+	def initialize(size = nil)
 		@afloat
+		@size = size
+		@count = size
 	end
 
 	def afloat?
@@ -33,9 +35,7 @@ end
 class AircraftCarrier < Ships
 
 	def initialize
-		super
-		@size = 5
-		@count = 5
+		super(5)
 	end
 
 end
@@ -43,9 +43,7 @@ end
 class Battleship < Ships
 
 	def initialize
-		super
-		@size = 4
-		@count = 4
+		super(4)
 	end
 
 end
@@ -53,9 +51,7 @@ end
 class Submarine < Ships
 
 	def initialize
-		super
-		@size = 3
-		@count = 3
+		super(3)
 	end
 
 end
@@ -63,9 +59,7 @@ end
 class Destroyer < Ships
 
 	def initialize
-		super
-		@size = 3
-		@count = 3
+		super(3)
 	end
 
 end
@@ -73,9 +67,7 @@ end
 class PatrolBoat < Ships
 
 	def initialize
-		super
-		@size = 2
-		@count = 2
+		super(2)
 	end
 
 end

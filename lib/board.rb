@@ -13,11 +13,7 @@ class Board
 	def hash_length
 		@grid.count
 	end
-
-	def array(x,y)
-		@grid[x][y]
-	end
-
+	
 	def find(x)
 		@grid.fetch(x)
 	end

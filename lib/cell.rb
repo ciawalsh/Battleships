@@ -1,11 +1,8 @@
 class Cell
 
 	def initialize
-		@occupied = false 			# Water.new (other way)
+		@occupied = false 
 		@shot_at = false
-	end
-
-	def ships
 		@ships = []
 	end
 
@@ -32,7 +29,7 @@ class Cell
 
 	def place(ship)
 		@occupied = true
-		ships << ship
+		@ships << ship
 	end
 
 end
