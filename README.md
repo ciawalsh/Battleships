@@ -1,5 +1,6 @@
 Battleships 
 ========================
+## Makers Academy Week 2 Project
 
 - Battleships (or Battleship) is a game where each player has a board upon which they can place a number of ships. The boards are 10x10 two dimensional grid.
 
@@ -11,6 +12,7 @@ Battleships
 
 - This software was developed using TDD.
 
+## Encapsulation
 
 ###Class - User/Player
 
@@ -39,3 +41,12 @@ Can show hit/miss       | Ship
 Can show a grid         | 
 Can announce            | 
 Can receive ships       | Ship, User
+
+## Technologies Used
+
+- Ruby
+- Rspec
+
+## Paired with:
+
+- [Luke Clewlow](https://github.com/lukeclewlow)
